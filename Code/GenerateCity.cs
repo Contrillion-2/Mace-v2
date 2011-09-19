@@ -305,8 +305,8 @@ namespace Mace
                 case "Diamond":
                     intWallMaterial = BlockType.DIAMOND_BLOCK;
                     break;
-                case "Glass":
-                    intWallMaterial = BlockType.GLASS;
+                case "Stone brick - 1.8!":
+                    intWallMaterial = BlockType.STONE_BRICK;
                     break;
                 default:
                     Debug.Fail("Invalid switch result");
@@ -323,13 +323,13 @@ namespace Mace
 
             if (booIncludeWalls)
             {
-                frmLogForm.UpdateLog("Creating walls");
+                frmLogForm.UpdateLog("Creating city walls");
                 Walls.MakeWalls(worldDest, intFarmLength, intMapLength, strCityEmblem, strOutsideLights, intWallMaterial);
             }
             frmLogForm.UpdateProgress(34);
             if (booIncludeBuildings || booIncludePaths)
             {
-                frmLogForm.UpdateLog("Creating paths");
+                frmLogForm.UpdateLog("Creating inner-city paths");
                 int[,] intArea = Paths.MakePaths(worldDest, bmDest, intFarmLength, intMapLength, strCitySize,
                                                  booIncludeMineshaft);
                 frmLogForm.UpdateProgress(36);
