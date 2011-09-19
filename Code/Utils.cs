@@ -249,7 +249,7 @@ namespace Mace
                     break;
                 case PlatformID.MacOSX:
                     MinecraftSavesDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal) +
-                           "/Library/Application Support/.minecraft/saves/" + subPath;
+                           "/Library/Application Support/minecraft/saves/" + subPath;
                     break;
                 default:
                     MinecraftSavesDirectory = Environment.GetEnvironmentVariable("APPDATA") + @"\.minecraft\saves\" + subPath;
