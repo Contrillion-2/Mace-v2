@@ -305,6 +305,9 @@ namespace Mace
                 case "Diamond":
                     intWallMaterial = BlockType.DIAMOND_BLOCK;
                     break;
+                case "Glass":
+                    intWallMaterial = BlockType.GLASS;
+                    break;
                 default:
                     Debug.Fail("Invalid switch result");
                     break;
